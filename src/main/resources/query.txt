@@ -1,0 +1,23 @@
+query{
+  events {
+    id
+    name
+    startDate
+    endDate
+    sessions(first:3, after: "T182"){
+      edges {
+        node {
+          id
+          title
+          description
+        }
+      }
+      pageInfo{
+        hasPreviousPage
+        hasNextPage
+        startCursor
+        endCursor
+      }
+    }
+  }
+}
